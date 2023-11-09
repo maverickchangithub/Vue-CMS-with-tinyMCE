@@ -4,4 +4,4 @@
 ```
 import * as editor from './editor'
 ```
-code block
+add tailwindcss
