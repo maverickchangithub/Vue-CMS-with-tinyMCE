@@ -1,2 +1,7 @@
 # Vue CMS with tinyMCE
-###codesample not showing fixed.
+### codesample plugin not showing fixed.
+#### readme.md file check
+```
+import * as editor from './editor'
+```
+code block
