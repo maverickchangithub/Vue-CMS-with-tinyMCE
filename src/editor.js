@@ -19,6 +19,7 @@
  import 'tinymce/plugins/image';
  import 'tinymce/plugins/preview';
  import 'tinymce/plugins/lists';
+ import 'tinymce/plugins/save';
  import 'tinymce/plugins/table';
  import 'tinymce/plugins/codesample';
 
@@ -31,12 +32,19 @@
  export function render () {
    tinymce.init({
      selector: 'textarea#editor',
-     plugins: 'preview advlist code emoticons link lists table image codesample',
-     toolbar: 'preview image codesample | bold italic | bullist numlist | link emoticons',
+     plugins: 'preview advlist code emoticons link lists table image codesample save',
+     toolbar: 'save preview image codesample | bold italic | bullist numlist | link emoticons',
      menubar: false,
      skin: false,
      content_css: false,
      content_style: contentUiCss.toString() + '\n' + contentCss.toString(),
+     codesample_languages: [
+      { text: 'HTML/XML', value: 'markup' },
+      { text: 'JavaScript', value: 'javascript' },      
+      { text: 'PHP', value: 'php' },
+      { text: 'Swift', value: 'swift' },
+      { text: 'Sql', value: 'sql' },
+    ],
      setup: (editor) => {
       editor.on('change', function () {
         editor.save();
