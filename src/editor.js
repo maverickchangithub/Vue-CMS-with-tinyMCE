@@ -37,5 +37,11 @@
      skin: false,
      content_css: false,
      content_style: contentUiCss.toString() + '\n' + contentCss.toString(),
+     setup: (editor) => {
+      editor.on('change', function () {
+        editor.save();
+        editor.getElement().dispatchEvent(new Event('input'));
+      });
+     }
    });
  };
