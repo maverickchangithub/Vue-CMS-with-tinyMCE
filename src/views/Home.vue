@@ -1,6 +1,8 @@
 <template>
-    <div>
-        Home page
+    <div class="space-y-5 py-20">
+        <div class="text-center text-4xl font-semibold">
+            Home page
+        </div>
         <MceEditor />
     </div>
 </template>
